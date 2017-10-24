@@ -12,7 +12,7 @@ import time
 import urllib2
 
 
-class DiscussionPostAccessor(object):
+class DiscussionPostUtils(object):
 
     def __init__(self, key):
         self.url_string = ("https://canvas.jmu.edu/api/v1/"
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     # Post 07: Algorithms for illegal - Mayfield 1
     TOPIC_ID = "5729010"
 
-    gp = DiscussionPostAccessor(sys.argv[1])
+    gp = DiscussionPostUtils(sys.argv[1])
     response = gp.get_discussion_post_entries(COURSE_ID, TOPIC_ID)
 
     if response is not None:
